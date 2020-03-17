@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Fundation//DTD Struts Configuration 2.5//EN"
+"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+		<package name="user" extends="struts-default">
+		
+				<action name="inicio">
+				
+					<result>paginas/registroTrabajador.jsp</result>
+				</action>
+				
+				<action name="RegistroNuevo" class="action.TrabajadorAction"
+				method="ingresar">
+					
+					<result name="exito">paginas/exito.jsp</result>
+					<result name="error">paginas/error.jsp</result>
+				
+				</action>
+		
+		</package>
+</struts>
